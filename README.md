@@ -16,27 +16,27 @@ Here are the steps involved in this process:
 
 ### Install and Include (node.js using npm)
 
-```
+```bash
 npm install innodb-optimized-uuid
 ```
 
-```
+```js
 var iouuid = require('innodb-optimized-uuid');
 ```
 
 ###  Install and Include (browser using bower)
 
-```
+```bash
 bower install innodb-optimized-uuid
 ```
 
-```
+```html
 <script src="bower_components/innodb-optimized-uuid/dist/innodb-optimized-uuid.js"></script>
 ```
 
 ### Generate an non-standard InnoDB-optimized UUID
 
-```
+```js
 iouuid.generate();
 ```
 
