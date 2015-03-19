@@ -6,6 +6,8 @@ If you are using MySQL, [uuids can add overhead](http://www.percona.com/blog/201
 more performant, but non-standard UUIDs that help speed up insets
 and is sized to fit inside a binary(16) column.
 
+[![Build Status](https://travis-ci.org/fisdap/innodb-optimized-uuid.svg)](https://travis-ci.org/fisdap/innodb-optimized-uuid)
+
 Here are the steps involved in this process:
 
 1. 13341cb5-c1f8-11e4-91e7-080027880ca6 (Standard UUID v1)
