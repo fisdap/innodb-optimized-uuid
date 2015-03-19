@@ -1,0 +1,26 @@
+{
+  "name": "innodb-optimized-uuid",
+  "version": "0.0.1",
+  "description": "A library that generates non-standard uuids that are optimized for fast writes in MySQL InnoDBs",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test"
+  },
+  "keywords": [
+    "uuid",
+    "innodb",
+    "mysql",
+    "doctrine"
+  ],
+  "author": "Jim Cummins",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^2.1.2",
+    "jscs": "^1.11.3",
+    "mocha": "^2.2.1",
+    "mocha-jscs": "^1.0.2"
+  },
+  "dependencies": {
+    "uuid": "^2.0.1"
+  }
+}
