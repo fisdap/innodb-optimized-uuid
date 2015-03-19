@@ -1,0 +1,27 @@
+{
+  "name": "innodb-optimized-uuid",
+  "version": "0.0.3",
+  "homepage": "https://github.com/fisdap/innodb-optimized-uuid",
+  "authors": [
+    "Jim Cummins <jimthedev@gmail.com>"
+  ],
+  "description": "Generate non-standard InnoDB-optimized UUIDs in JavaScript",
+  "main": "lib/index.js",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "uuid",
+    "innodb",
+    "mysql"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
