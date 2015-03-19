@@ -2,7 +2,7 @@
   "name": "innodb-optimized-uuid",
   "version": "0.0.1",
   "description": "A library that generates non-standard uuids that are optimized for fast writes in MySQL InnoDBs",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha test"
   },
