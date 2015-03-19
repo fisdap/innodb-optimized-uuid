@@ -50,3 +50,10 @@ The above steps will output non-standard InnoDB-optimized UUID in this format:
 11E4C1F813341CB591E7080027880CA6
 ```
 
+### Development
+
+## Tests
+
+Clone this repo.
+Run `npm install && npm test`
+
