@@ -33,15 +33,15 @@ function inc(importance) {
     .pipe(tagVersion({'prefix':''}));
 }
 
-gulp.task('patch', ['test'], function() {
+gulp.task('patch', ['test'], function () {
   return inc('patch');
 });
 
-gulp.task('feature', ['test'], function() {
+gulp.task('feature', ['test'], function () {
   return inc('minor');
 });
 
-gulp.task('release', ['test'], function() {
+gulp.task('release', ['test'], function () {
   return inc('major');
 });
 
