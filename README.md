@@ -59,3 +59,22 @@ The above steps will output non-standard InnoDB-optimized UUID in this format:
 Clone this repo.
 Run `npm install && npm test`
 
+## Browser example
+
+1. Clone the repo
+2. `npm install -g liveserver`
+3. run `live-server` in the project root
+
+## Building
+
+To build, simply execute:
+`gulp build`
+
+## Increasing (bumping) version
+
+Commit all of your changes locally.
+For a patch version bump: `gulp patch`
+For a minor version bump: `gulp minor`
+For a major version bump: `gulp major`
+Then finally push using: `git push origin master --tags`
+

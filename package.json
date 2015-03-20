@@ -24,6 +24,7 @@
     "gulp-filter": "^2.0.2",
     "gulp-git": "^1.1.0",
     "gulp-tag-version": "^1.2.1",
+    "gulp-util": "^3.0.4",
     "jscs": "^1.11.3",
     "mocha": "^2.2.1",
     "mocha-jscs": "^1.0.2",
