@@ -8,6 +8,7 @@ var webpack = require('webpack');
 var webpackConfig = require('./webpack.config.js');
 var spawn = require('child_process').spawn;
 var mocha = require('gulp-spawn-mocha');
+var runSequence = require('run-sequence');
 
 /**
  * Bumping version number and tagging the repository with it.
@@ -93,7 +94,6 @@ gulp.task('push', function() {
   });
 });
 
-gulp.task('publish', ['test', 'npm', 'push'], function() {
-  return gulp.src(['src.js'], {read: false})
-        .pipe();
+gulp.task('publish', function(callback) {
+  runSequence('test',['npm', 'push'],callback);
 });

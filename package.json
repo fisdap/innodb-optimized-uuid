@@ -32,6 +32,7 @@
     "jscs": "^1.11.3",
     "mocha": "^2.2.1",
     "mocha-jscs": "^1.0.2",
+    "run-sequence": "^1.0.2",
     "webpack": "^1.7.3"
   },
   "dependencies": {
