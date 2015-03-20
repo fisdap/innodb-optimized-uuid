@@ -33,15 +33,15 @@ function inc(importance) {
     .pipe(tagVersion({'prefix':''}));
 }
 
-gulp.task('patch', function() {
+gulp.task('patch', ['test'], function() {
   return inc('patch');
 });
 
-gulp.task('feature', function() {
+gulp.task('feature', ['test'], function() {
   return inc('minor');
 });
 
-gulp.task('release', function() {
+gulp.task('release', ['test'], function() {
   return inc('major');
 });
 
@@ -83,11 +83,11 @@ gulp.task('test', function() {
 });
 
 gulp.task('npm', function(done) {
-  spawn('npm', ['publish'], {stdio: 'inherit'}).on('close', done);
+  return spawn('npm', ['publish'], {stdio: 'inherit'}).on('close', done);
 });
 
 gulp.task('push', function() {
-  git.push('origin', 'master', {args: ' --tags'}, function(err) {
+  return git.push('origin', 'master', {args: ' --tags'}, function(err) {
     if (err) {
       throw err;
     }
@@ -95,5 +95,5 @@ gulp.task('push', function() {
 });
 
 gulp.task('publish', function(callback) {
-  runSequence('test',['npm', 'push'],callback);
+  runSequence('test', 'npm', 'push', callback);
 });
