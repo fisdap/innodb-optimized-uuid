@@ -6,7 +6,7 @@ If you are using MySQL, [uuids can add overhead](http://www.percona.com/blog/201
 more performant, but non-standard UUIDs that help speed up insets
 and is sized to fit inside a binary(16) column.
 
-[![Build Status](https://travis-ci.org/fisdap/innodb-optimized-uuid.svg)](https://travis-ci.org/fisdap/innodb-optimized-uuid)
+[![Build Status](https://travis-ci.org/fisdap/innodb-optimized-uuid.svg)](https://travis-ci.org/fisdap/innodb-optimized-uuid) [![Dependency Status](https://gemnasium.com/fisdap/innodb-optimized-uuid.svg)](https://gemnasium.com/fisdap/innodb-optimized-uuid)
 
 Here are the steps involved in this process:
 
@@ -16,13 +16,17 @@ Here are the steps involved in this process:
 
 ## Usage Instructions
 
-### Install (node.js using npm)
+### Install and Include (node.js using npm)
 
 ```bash
 npm install innodb-optimized-uuid
 ```
 
-###  Install (browser using bower)
+```js
+var iouuid = require('innodb-optimized-uuid');
+```
+
+###  Install and Include (browser using bower)
 
 ```bash
 bower install innodb-optimized-uuid
@@ -32,10 +36,8 @@ bower install innodb-optimized-uuid
 <script src="bower_components/innodb-optimized-uuid/dist/innodb-optimized-uuid.js"></script>
 ```
 
-### Include 
-
 ```js
-var iouuid = require('innodb-optimized-uuid');
+var iouuid = window.innodbOptimizedUuid;
 ```
 
 ### Generate a non-standard InnoDB-optimized UUID
