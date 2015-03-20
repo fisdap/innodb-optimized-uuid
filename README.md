@@ -77,8 +77,8 @@ To build, simply execute:
 Commit all of your changes locally.
 
 For a patch version bump: `gulp patch`
-For a minor version bump: `gulp minor`
-For a major version bump: `gulp major`
+For a minor version bump: `gulp feature`
+For a major version bump: `gulp release`
 
 Then, finally publish to github/bower and npm using: `gulp publish`
 
