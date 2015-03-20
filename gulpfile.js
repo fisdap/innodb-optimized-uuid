@@ -7,6 +7,7 @@ var gutil = require('gulp-util');
 var webpack = require('webpack');
 var webpackConfig = require('./webpack.config.js');
 var spawn = require('child_process').spawn;
+var mocha = require('gulp-spawn-mocha');
 
 /**
  * Bumping version number and tagging the repository with it.
@@ -72,6 +73,14 @@ gulp.task('webpack:build', function(callback) {
   });
 });
 
+gulp.task('test', function() {
+  return gulp
+    .src(['test/**/*.js'])
+    .pipe(mocha({
+      env: {'NODE_ENV': 'test'}
+    }));
+});
+
 gulp.task('npm', function(done) {
   spawn('npm', ['publish'], {stdio: 'inherit'}).on('close', done);
 });
@@ -84,4 +93,4 @@ gulp.task('push', function() {
   });
 });
 
-gulp.task('publish', ['npm', 'push']);
+gulp.task('publish', ['test', 'npm', 'push']);
