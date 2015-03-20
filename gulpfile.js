@@ -6,6 +6,7 @@ var tagVersion = require('gulp-tag-version');
 var gutil = require('gulp-util');
 var webpack = require('webpack');
 var webpackConfig = require('./webpack.config.js');
+var spawn = require('child_process').spawn;
 
 /**
  * Bumping version number and tagging the repository with it.
@@ -70,3 +71,17 @@ gulp.task('webpack:build', function(callback) {
     callback();
   });
 });
+
+gulp.task('npm', function(done) {
+  spawn('npm', ['publish'], {stdio: 'inherit'}).on('close', done);
+});
+
+gulp.task('push', function() {
+  git.push('origin', 'master', {args: ' --tags'}, function(err) {
+    if (err) {
+      throw err;
+    }
+  });
+});
+
+gulp.task('publish', ['npm', 'push']);

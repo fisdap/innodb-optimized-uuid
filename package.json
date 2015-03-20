@@ -8,7 +8,8 @@
     "url": "https://github.com/fisdap/innodb-optimized-uuid.git"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha test"
+    "test": "./node_modules/mocha/bin/mocha test",
+    "test-on-travis": "./node_modules/.bin/istanbul cover --report lcovonly ./node_modules/.bin/_mocha && ./node_modules/.bin/codeclimate < ./coverage/lcov.info"
   },
   "keywords": [
     "uuid",
@@ -19,12 +20,14 @@
   "license": "MIT",
   "devDependencies": {
     "chai": "^2.1.2",
+    "codeclimate-test-reporter": "0.0.4",
     "gulp": "^3.8.11",
     "gulp-bump": "^0.3.0",
     "gulp-filter": "^2.0.2",
     "gulp-git": "^1.1.0",
     "gulp-tag-version": "^1.2.1",
     "gulp-util": "^3.0.4",
+    "istanbul": "^0.3.8",
     "jscs": "^1.11.3",
     "mocha": "^2.2.1",
     "mocha-jscs": "^1.0.2",

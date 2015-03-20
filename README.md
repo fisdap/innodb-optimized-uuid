@@ -6,7 +6,7 @@ If you are using MySQL, [uuids can add overhead](http://www.percona.com/blog/201
 more performant, but non-standard UUIDs that help speed up insets
 and is sized to fit inside a binary(16) column.
 
-[![Build Status](https://travis-ci.org/fisdap/innodb-optimized-uuid.svg)](https://travis-ci.org/fisdap/innodb-optimized-uuid) [![Dependency Status](https://gemnasium.com/fisdap/innodb-optimized-uuid.svg)](https://gemnasium.com/fisdap/innodb-optimized-uuid)
+[![Build Status](https://travis-ci.org/fisdap/innodb-optimized-uuid.svg)](https://travis-ci.org/fisdap/innodb-optimized-uuid) [![Dependency Status](https://gemnasium.com/fisdap/innodb-optimized-uuid.svg)](https://gemnasium.com/fisdap/innodb-optimized-uuid) [![Code Climate](https://codeclimate.com/github/fisdap/innodb-optimized-uuid/badges/gpa.svg)](https://codeclimate.com/github/fisdap/innodb-optimized-uuid) [![Test Coverage](https://codeclimate.com/github/fisdap/innodb-optimized-uuid/badges/coverage.svg)](https://codeclimate.com/github/fisdap/innodb-optimized-uuid)
 
 Here are the steps involved in this process:
 
@@ -72,11 +72,13 @@ Run `npm install && npm test`
 To build, simply execute:
 `gulp build`
 
-## Increasing (bumping) version
+## Increasing (bumping) the current version
 
 Commit all of your changes locally.
+
 For a patch version bump: `gulp patch`
 For a minor version bump: `gulp minor`
 For a major version bump: `gulp major`
-Then finally push using: `git push origin master --tags`
+
+Then, finally publish to github/bower and npm using: `gulp publish`
 
