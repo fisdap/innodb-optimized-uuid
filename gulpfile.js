@@ -75,7 +75,7 @@ gulp.task('webpack:build', function(callback) {
 
 gulp.task('test', function() {
   return gulp
-    .src(['test/**/*.js'])
+    .src(['test/*.js'])
     .pipe(mocha({
       env: {'NODE_ENV': 'test'}
     }));
@@ -93,4 +93,7 @@ gulp.task('push', function() {
   });
 });
 
-gulp.task('publish', ['test', 'npm', 'push']);
+gulp.task('publish', ['test', 'npm', 'push'], function() {
+  return gulp.src(['src.js'], {read: false})
+        .pipe();
+});
