@@ -6,7 +6,7 @@
     "Jim Cummins <jimthedev@gmail.com>"
   ],
   "description": "Generate non-standard InnoDB-optimized UUIDs in JavaScript",
-  "main": "lib/index.js",
+  "main": "dist/innodb-optimized-uuid.js",
   "moduleType": [
     "globals",
     "node"
