@@ -1,6 +1,6 @@
 {
   "name": "innodb-optimized-uuid",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A library that generates non-standard uuids that are optimized for fast writes in MySQL InnoDBs",
   "main": "./lib/index.js",
   "jspm": {
