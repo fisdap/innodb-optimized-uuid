@@ -1,6 +1,6 @@
 {
   "name": "innodb-optimized-uuid",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "homepage": "https://github.com/fisdap/innodb-optimized-uuid",
   "authors": [
     "Jim Cummins <jimthedev@gmail.com>"
