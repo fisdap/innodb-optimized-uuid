@@ -16,17 +16,28 @@ Here are the steps involved in this process:
 
 ## Usage Instructions
 
-### Install and list as dependency in package.json (node.js using npm or webpack)
+### Install (in Node.js and/or Webpack)
 
 ```bash
 npm install innodb-optimized-uuid --save-exact
 ```
 
+If using Node or Webpack w/commonJS, import using:
+
 ```js
 var iouuid = require('innodb-optimized-uuid');
 ```
 
-###  Install and Include (browser using bower)
+Or if using ES6 module syntax, import using:
+
+```js
+import {iouuid} from 'innodb-optimized-uuid';
+```
+
+Note that if you're using Webpack, you should include [babel-loader](https://github.com/babel/babel-loader) if you wish you use the ES6 syntax.
+
+
+###  Install and Include (using bower)
 
 ```bash
 bower install innodb-optimized-uuid
