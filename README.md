@@ -16,10 +16,10 @@ Here are the steps involved in this process:
 
 ## Usage Instructions
 
-### Install and Include (node.js using npm)
+### Install and list as dependency in package.json (node.js using npm or webpack)
 
 ```bash
-npm install innodb-optimized-uuid
+npm install innodb-optimized-uuid --save-exact
 ```
 
 ```js
