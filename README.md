@@ -34,7 +34,26 @@ Or if using ES6 module syntax, import using:
 import {iouuid} from 'innodb-optimized-uuid';
 ```
 
-Note that if you're using Webpack, you should include [babel-loader](https://github.com/babel/babel-loader) if you wish you use the ES6 syntax.
+Note that if you're using Webpack, you should include [babel-loader](https://github.com/babel/babel-loader) if you wish you use the ES6 syntax. Here is an example webpack.config.js that you might use.
+
+```js
+module.exports = {
+  entry: './index.js',
+  output: {
+    filename: 'bundle.js',
+    path: __dirname
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /(node_modules|bower_components)/
+      }
+    ]
+  }
+}
+```
 
 
 ###  Install and Include (using bower)
