@@ -19,22 +19,22 @@ Here are the steps involved in this process:
 ### Install (in Node.js and/or Webpack)
 
 ```bash
-npm install innodb-optimized-uuid --save-exact
+  npm install innodb-optimized-uuid --save-exact
 ```
 
-If using Node or Webpack w/commonJS, import using:
+If using **Node** or **Webpack** w/CommonJS, import using:
 
 ```js
-var iouuid = require('innodb-optimized-uuid');
+  var iouuid = require('innodb-optimized-uuid');
 ```
 
-Or if using ES6 module syntax, import using:
+Or if using **ES6** module syntax, import using:
 
 ```js
-import {iouuid} from 'innodb-optimized-uuid';
+  import {iouuid} from 'innodb-optimized-uuid';
 ```
 
-Note that if you're using Webpack, you should include [babel-loader](https://github.com/babel/babel-loader) if you wish you use the ES6 syntax. Here is an example webpack.config.js that you might use.
+Note that if you're using **Webpack**, you should include [babel-loader](https://github.com/babel/babel-loader) if you wish you use the **ES6** syntax. Here is an example webpack.config.js that you might use:
 
 ```js
 module.exports = {
@@ -59,21 +59,21 @@ module.exports = {
 ###  Install and Include (using bower)
 
 ```bash
-bower install innodb-optimized-uuid
+  bower install innodb-optimized-uuid
 ```
 
 ```html
-<script src="bower_components/innodb-optimized-uuid/dist/innodb-optimized-uuid.js"></script>
+  <script src="bower_components/innodb-optimized-uuid/dist/innodb-optimized-uuid.js"></script>
 ```
 
 ```js
-var iouuid = window.innodbOptimizedUuid;
+  var iouuid = window.innodbOptimizedUuid;
 ```
 
 ### Generate a non-standard InnoDB-optimized UUID
 
 ```js
-iouuid.generate();
+  iouuid.generate();
 ```
 
 ## Output
@@ -81,7 +81,7 @@ iouuid.generate();
 The above steps will output non-standard InnoDB-optimized UUID in this format:
 
 ```
-11E4C1F813341CB591E7080027880CA6
+  11E4C1F813341CB591E7080027880CA6
 ```
 
 ### Development
@@ -106,9 +106,9 @@ To build, simply execute:
 
 Commit all of your changes locally.
 
-For a patch version bump: `gulp patch`
-For a minor version bump: `gulp feature`
-For a major version bump: `gulp release`
+- For a patch version bump: `gulp patch`
+- For a minor version bump: `gulp feature`
+- For a major version bump: `gulp release`
 
 Then, finally publish to github/bower and npm using: `gulp publish`
 
