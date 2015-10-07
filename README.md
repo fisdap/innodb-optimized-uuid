@@ -53,36 +53,32 @@ For more information on how to use this package in **Webpack**, see the [full ex
 ### Generate a non-standard InnoDB-optimized UUID
 
 ```js
-  iouuid.generate();
+  var uuid = iouuid.generate();
+  // uuid's value is now a non-standard innodb-optimized uuid in the format:
+  //   11E4C1F813341CB591E7080027880CA6
 ```
 
-## Output
+**A common mistake:** When generating multiple UUIDs in this format, uuids may incorrectly appear equal to the human eye. This because the start and end characters are often the same. In this format the values in the middle of the uuid changes most often when called repeatedly.
 
-The above steps will output non-standard InnoDB-optimized UUID in this format:
+## Development
 
-```
-  11E4C1F813341CB591E7080027880CA6
-```
-
-### Development
-
-## Tests
+### Tests
 
 Clone this repo.
 Run `npm install && npm test`
 
-## Browser example
+### Browser example
 
 1. Clone the repo
 2. `npm install -g liveserver`
 3. run `live-server` in the project root
 
-## Building
+### Building
 
 To build, simply execute:
 `gulp build`
 
-## Increasing (bumping) the current version
+### Increasing (bumping) the current version
 
 Commit all of your changes locally.
 
